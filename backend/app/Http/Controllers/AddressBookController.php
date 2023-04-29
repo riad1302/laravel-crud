@@ -49,4 +49,18 @@ class AddressBookController extends Controller
         }
 
     }
+
+    public function destroy(int $id)
+    {
+        try {
+            $book = $this->addressBookService->delete($id);
+            if (! empty($book)) {
+                return $this->sendResponse([], 'Address Book Delete Successfully');
+            } else {
+                return $this->sendError([], 'Address Book Delete Failed');
+            }
+        } catch (\Exception $exception) {
+            return $exception->getMessage();
+        }
+    }
 }

@@ -36,8 +36,18 @@ class AddressBookService
             'gender' => $book->gender,
             'age' => $book->age,
             'nationality' => $book->nationality,
-            'created_by' => $book->created_by, //Auth::user()->id,
+            'created_by' => Auth::user()->id,
         ];
 
+    }
+
+    public function delete($id)
+    {
+        $book = AddressBook::find($id);
+        if (! empty($book)) {
+            return $book->delete();
+        }
+
+        return false;
     }
 }
