@@ -1,0 +1,18 @@
+# Version of Docker-compose
+version: "3.9"
+services:
+  react:
+    # Location to the react.js dockerfile
+    build:
+      context:
+        .
+        # Name of the dockerfile
+      dockerfile: Dockerfile
+    container_name: react-container
+    ports:
+      # Host port:Container port
+      - "3009:3000"
+    stdin_open: true
+    volumes:
+      - .:/app
+      - /app/node_modules
