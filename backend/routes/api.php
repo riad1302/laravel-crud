@@ -27,8 +27,9 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::controller(AddressBookController::class)->group(function () {
         Route::get('/book/list', 'index');
+        Route::get('/book/view/{id}', 'view');
         Route::post('/book/create', 'store');
         Route::post('/book/update/{id}', 'update');
-        Route::post('/book/delete/{id}', 'destroy');
+        Route::delete('/book/delete/{id}', 'destroy');
     });
 });

@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/js/all.js";
 import "./App.css";
 
 import BoardAdmin from "./components/BoardAdmin";
@@ -12,6 +14,8 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
+import BookList from "./components/BookList";
+import BookEdit from "./components/Book";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
@@ -124,7 +128,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/user" element={<BoardUser />} />
+          <Route path="/user" element={<BookList />} />
+          <Route path="/book/:id" component={BookEdit} />
           <Route path="/mod" element={<BoardModerator />} />
           <Route path="/admin" element={<BoardAdmin />} />
         </Routes>

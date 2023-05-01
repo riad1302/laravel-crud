@@ -27,7 +27,7 @@ class AddressBookListResource extends JsonResource
             'email' => $this->email,
             'website' => $this->website,
             'gender' => $this->gender,
-            'age' => $this->website,
+            'age' => $this->age,
             'nationality' => $this->nationality,
             'created_by' => $this->user->name,
         ];

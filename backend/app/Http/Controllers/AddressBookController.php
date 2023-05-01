@@ -63,4 +63,11 @@ class AddressBookController extends Controller
             return $exception->getMessage();
         }
     }
+
+    public function view(int $id)
+    {
+        $bookList = AddressBook::with('user:id,name')->where('id', $id)->first();
+
+        return $this->sendResponse(AddressBookListResource::make($bookList));
+    }
 }

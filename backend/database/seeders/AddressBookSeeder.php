@@ -12,6 +12,6 @@ class AddressBookSeeder extends Seeder
      */
     public function run(): void
     {
-        AddressBook::factory(1000)->create();
+        AddressBook::factory(1200)->create();
     }
 }
