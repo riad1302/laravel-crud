@@ -1,41 +1,39 @@
-import http from "../http-common";
+import axios from "axios";
+import authHeader from "./auth-header";
+
+const API_URL = "http://localhost:90/api/book/";
 
 const getAll = () => {
-    return http.get("/list");
+    return axios.get(API_URL + "list", { headers: authHeader() });
 };
 
 const get = (id) => {
-    return http.get(`/view/${id}`);
+    return axios.get(API_URL + `view/${id}`, { headers: authHeader() });
 };
 
 const create = (data) => {
-    return http.post("/create", data);
+    return axios.post(API_URL + "create", { headers: authHeader() });
 };
 
 const update = (id, data) => {
-    return http.put(`/update/${id}`, data);
+    return axios.post(API_URL + `update/${id}`, { headers: authHeader() });
 };
 
 const remove = (id) => {
-    return http.delete(`/delete/${id}`);
+    return axios.delete(API_URL + `delete/${id}`, { headers: authHeader() });
 };
 
-const removeAll = () => {
-    return http.delete(`/tutorials`);
+const findByTitle = (name) => {
+    return axios.get(API_URL + `list?name=${name}`, { headers: authHeader() });
 };
 
-const findByTitle = (title) => {
-    return http.get(`/tutorials?title=${title}`);
-};
-
-const TutorialService = {
+const BookService = {
     getAll,
     get,
     create,
     update,
     remove,
-    removeAll,
     findByTitle,
 };
 
-export default TutorialService;
+export default BookService;

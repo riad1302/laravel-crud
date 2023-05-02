@@ -6,6 +6,8 @@ use App\Http\Requests\AddressBookRequest;
 use App\Http\Resources\AddressBookListResource;
 use App\Models\AddressBook;
 use App\Services\AddressBookService;
+use Illuminate\Http\Request;
+
 
 class AddressBookController extends Controller
 {
@@ -14,8 +16,11 @@ class AddressBookController extends Controller
 
     }
 
-    public function index()
+    public function index(Request $request)
     {
+//        if ($request->has('name')) {
+//            $name = $request->name;
+//        }
         $bookList = AddressBook::with('user:id,name')->paginate(20);
 
         return $this->sendResponse(AddressBookListResource::collection($bookList));
