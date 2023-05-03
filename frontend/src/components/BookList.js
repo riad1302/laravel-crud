@@ -43,6 +43,9 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
 
 function AddressBook() {
   const navigate = useNavigate();
+  if(!BookDataService.checkUser()){
+    window.location.href = '/login';
+  }
   const MySwal = withReactContent(Swal)
 
   const columns = [
@@ -128,7 +131,7 @@ function AddressBook() {
             },
             buttonsStyling: false
           })
-          
+
           swalWithBootstrapButtons.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",

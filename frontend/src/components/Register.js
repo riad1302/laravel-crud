@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import CheckButton from "react-validation/build/button";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -51,6 +52,7 @@ const vpassword = (value) => {
 const Register = () => {
   const form = useRef();
   const checkBtn = useRef();
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -86,6 +88,10 @@ const Register = () => {
       dispatch(register(name, email, password))
         .then(() => {
           setSuccessful(true);
+          toast.success('Registration Successfully', {
+            position: toast.POSITION.TOP_CENTER
+          });
+          navigate('/login');
         })
         .catch(() => {
           setSuccessful(false);
