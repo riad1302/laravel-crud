@@ -16,12 +16,10 @@ class AddressBookController extends Controller
 
     }
 
-    public function index(Request $request)
+    public function index()
     {
-//        if ($request->has('name')) {
-//            $name = $request->name;
-//        }
-        $bookList = AddressBook::with('user:id,name')->paginate(20);
+        $bookList = AddressBook::with('user:id,name')->get();
+        //$bookList = AddressBook::with('user:id,name')->paginate(20);
 
         return $this->sendResponse(AddressBookListResource::collection($bookList));
     }
@@ -31,9 +29,9 @@ class AddressBookController extends Controller
         try {
             $book = $this->addressBookService->save($request);
             if (! empty($book)) {
-                return $this->sendResponse([], 'Address Book Create Successfully');
+                return $this->sendResponse([], 'Address Book Edit Create Successfully');
             } else {
-                return $this->sendError([], 'Address Book Create Failed');
+                return $this->sendError([], 'Address Book Edit Create Failed');
             }
         } catch (\Exception $exception) {
             return $exception->getMessage();
@@ -45,9 +43,9 @@ class AddressBookController extends Controller
         try {
             $book = $this->addressBookService->update($request, $id);
             if (! empty($book)) {
-                return $this->sendResponse([], 'Address Book Update Successfully');
+                return $this->sendResponse([], 'Address BookEdit Update Successfully');
             } else {
-                return $this->sendError([], 'Address Book Update Failed');
+                return $this->sendError([], 'Address BookEdit Update Failed');
             }
         } catch (\Exception $exception) {
             return $exception->getMessage();
@@ -60,9 +58,9 @@ class AddressBookController extends Controller
         try {
             $book = $this->addressBookService->delete($id);
             if (! empty($book)) {
-                return $this->sendResponse([], 'Address Book Delete Successfully');
+                return $this->sendResponse([], 'Address BookEdit Delete Successfully');
             } else {
-                return $this->sendError([], 'Address Book Delete Failed');
+                return $this->sendError([], 'Address BookEdit Delete Failed');
             }
         } catch (\Exception $exception) {
             return $exception->getMessage();

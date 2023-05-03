@@ -12,11 +12,12 @@ const get = (id) => {
 };
 
 const create = (data) => {
-    return axios.post(API_URL + "create", { headers: authHeader() });
+    console.log(data)
+    return axios.post(API_URL + "create", data,  { headers: authHeader() });
 };
 
 const update = (id, data) => {
-    return axios.post(API_URL + `update/${id}`, { headers: authHeader() });
+    return axios.put(API_URL + `update/${id}`, data, { headers: authHeader() });
 };
 
 const remove = (id) => {

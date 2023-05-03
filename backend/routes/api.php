@@ -29,7 +29,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
         Route::get('/book/list', 'index');
         Route::get('/book/view/{id}', 'view');
         Route::post('/book/create', 'store');
-        Route::post('/book/update/{id}', 'update');
+        Route::put('/book/update/{id}', 'update');
         Route::delete('/book/delete/{id}', 'destroy');
     });
 });

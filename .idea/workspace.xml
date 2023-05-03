@@ -7,17 +7,15 @@
     <list default="true" id="6871dbb3-69c7-40ae-8aad-0d74e6d91e41" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/AddressBookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/AddressBookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoardAdmin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoardModerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoardUser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookList222.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/http-common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddBook.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookList222.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/services/book.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/book.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/user.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,6 +151,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -173,8 +175,12 @@
       <workItem from="1682690214591" duration="10094000" />
       <workItem from="1682761844688" duration="13753000" />
       <workItem from="1682842952169" duration="4196000" />
+      <workItem from="1683085282122" duration="7412000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -195,13 +201,13 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1683013437485" />
-    <state x="167" y="125" width="1099" height="543" key="VCS.FileHistoryDialog" timestamp="1683014554652">
+    <state x="167" y="125" width="1099" height="543" key="VCS.FileHistoryDialog" timestamp="1683091363955">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="167" y="125" width="1099" height="543" key="VCS.FileHistoryDialog/67.27.1299.741@67.27.1299.741" timestamp="1683014554652" />
-    <state x="362" y="136" width="771" height="520" key="find.popup" timestamp="1683014994946">
+    <state x="167" y="125" width="1099" height="543" key="VCS.FileHistoryDialog/67.27.1299.741@67.27.1299.741" timestamp="1683091363955" />
+    <state x="362" y="136" width="771" height="520" key="find.popup" timestamp="1683089825905">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="362" y="136" width="771" height="520" key="find.popup/67.27.1299.741@67.27.1299.741" timestamp="1683014994946" />
+    <state x="362" y="136" width="771" height="520" key="find.popup/67.27.1299.741@67.27.1299.741" timestamp="1683089825905" />
   </component>
 </project>

@@ -1,13 +1,17 @@
 import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import BookEdit from "./components/Book";
+import BookAdd from "./components/BookAdd";
+import BookEdit from "./components/BookEdit";
 import BookList from "./components/BookList";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
@@ -48,25 +52,25 @@ const App = () => {
 
   return (
     <div>
+       <ToastContainer />
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <Link to={"/"} className="navbar-brand">
           Laravel Crud
         </Link>
-        <div className="navbar-nav mr-auto">
-          {/* <li className="nav-item">
-            <Link to={"/home"} className="nav-link">
-              Home
-            </Link>
-          </li> */}
-
-          {currentUser && (
+        {currentUser && (
+          <div className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to={"/user"} className="nav-link">
-                User
+              <Link to={"/bookAdd"} className="nav-link">
+                Add Book
               </Link>
             </li>
-          )}
-        </div>
+              <li className="nav-item">
+                <Link to={"/book"} className="nav-link">
+                  Book
+                </Link>
+              </li>
+          </div>
+        )}
 
         {currentUser ? (
           <div className="navbar-nav ml-auto">
@@ -104,8 +108,9 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/user" element={<BookList />} />
-          <Route path="/book/:id" component={BookEdit} />
+          <Route path="/book" element={<BookList />} />
+          <Route path="/bookAdd" element={<BookAdd />} />
+          <Route path="/book/:id" element={<BookEdit />} />
         </Routes>
       </div>
 
