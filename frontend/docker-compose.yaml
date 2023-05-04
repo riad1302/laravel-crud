@@ -3,11 +3,12 @@ version: "3.9"
 services:
   react:
     # Location to the react.js dockerfile
-    build:
-      context:
-        .
-        # Name of the dockerfile
-      dockerfile: Dockerfile
+#    build:
+#      context:
+#        .
+#        # Name of the dockerfile
+#      dockerfile: Dockerfile
+    image: riad1302/front-service:v1
     container_name: react-container
     ports:
       # Host port:Container port

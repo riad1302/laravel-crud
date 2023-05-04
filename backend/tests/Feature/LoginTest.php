@@ -22,7 +22,7 @@ class LoginTest extends TestCase
             'email' => $user->email,
             'password' => 'password',
         ])->assertStatus(200)->assertJson(function (AssertableJson $json) use ($user) {
-            $json->has('data.token')
+            $json->has('data.accessToken')
                 ->where('data.name', $user->name)
                 ->where('data.email', $user->email)
                 ->etc();
