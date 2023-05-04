@@ -1,0 +1,23 @@
+version: '3'
+services:
+    backend:
+        image: riad1302/backend-service:v1
+        container_name: backend
+        ports:
+            - "90:80"
+        networks:
+            - crud
+
+    frontend:
+        image: riad1302/front-service:v1
+        container_name: frontend
+        ports:
+            # Host port:Container port
+            - "3009:3000"
+        stdin_open: true
+        networks:
+            - crud
+
+networks:
+    crud:
+        driver: bridge
