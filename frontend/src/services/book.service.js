@@ -1,7 +1,6 @@
 import axios from "axios";
-import authHeader from "./auth-header";
 import { useSelector } from "react-redux";
-import { Navigate } from 'react-router-dom';
+import authHeader from "./auth-header";
 
 const API_URL = "http://localhost:90/api/book/";
 
@@ -9,8 +8,8 @@ const checkUser = () => {
     const { user: currentUser } = useSelector((state) => state.auth);
     return currentUser;
 };
-const getAll = () => {
-    return axios.get(API_URL + "list", { headers: authHeader() });
+const getAll = (page, countPerPage) => {
+    return axios.get(API_URL + `list?page=${page}&per_page=${countPerPage}&delay=1`, { headers: authHeader() });
 };
 
 const get = (id) => {

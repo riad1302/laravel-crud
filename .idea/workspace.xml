@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6871dbb3-69c7-40ae-8aad-0d74e6d91e41" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/AddressBookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/AddressBookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Http/Resources/AddressBookListResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Resources/AddressBookListResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/book.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/book.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +22,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/backend/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,24 +148,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/habiburrahmanriad/Sites/tesing-project/docker-sail/laravel-crud",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -175,11 +176,12 @@
       <workItem from="1683194732198" duration="2711000" />
       <workItem from="1683198707933" duration="26000" />
       <workItem from="1683202499167" duration="7576000" />
+      <workItem from="1683780540867" duration="7428000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -190,5 +192,11 @@
         <option value="1" />
       </list>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="167" y="125" width="1099" height="543" key="VCS.FileHistoryDialog" timestamp="1683780570696">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="167" y="125" width="1099" height="543" key="VCS.FileHistoryDialog/67.27.1299.741@67.27.1299.741" timestamp="1683780570696" />
   </component>
 </project>

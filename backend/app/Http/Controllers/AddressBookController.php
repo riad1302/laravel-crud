@@ -7,6 +7,7 @@ use App\Http\Resources\AddressBookListResource;
 use App\Models\AddressBook;
 use App\Services\AddressBookService;
 use Illuminate\Http\Request;
+use function League\Flysystem\publicUrl;
 
 
 class AddressBookController extends Controller
@@ -18,10 +19,14 @@ class AddressBookController extends Controller
 
     public function index()
     {
-        $bookList = AddressBook::with('user:id,name')->orderBy('id', 'DESC')->get();
-        //$bookList = AddressBook::with('user:id,name')->paginate(20);
+        //$bookList = AddressBook::with('user:id,name')->orderBy('id', 'DESC')->get();
+        $bookList = AddressBook::with('user:id,name')->orderBy('id', 'DESC')->paginate(20);
+        return $this->sendResponse(AddressBookListResource::collection($bookList), '', $bookList->total());
+    }
 
-        return $this->sendResponse(AddressBookListResource::collection($bookList));
+    public function getTotalList()
+    {
+        return AddressBook::count();
     }
 
     public function store(AddressBookRequest $request)
@@ -70,7 +75,6 @@ class AddressBookController extends Controller
     public function view(int $id)
     {
         $bookList = AddressBook::with('user:id,name')->where('id', $id)->first();
-
         return $this->sendResponse(AddressBookListResource::make($bookList));
     }
 }

@@ -166,10 +166,14 @@ function AddressBook() {
     }
   };
   const [data, setData] = useState([]);
+  const [totalData, setTotalData] = useState([]);
+  const [page, setPage] = useState(1);
+  const countPerPage = 20;
   const retrieveBooks = () => {
-    BookDataService.getAll()
+    BookDataService.getAll(page, countPerPage)
       .then((response) => {
         setData(response.data.data);
+        setTotalData(response.data.total);
       })
       .catch((e) => {
         console.log(e);
@@ -177,7 +181,7 @@ function AddressBook() {
   };
   useEffect(() => {
     retrieveBooks();
-  }, []);
+  }, [page]);
   const [filterText, setFilterText] = useState("");
   const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
   const filteredItems = data.filter(
@@ -207,6 +211,13 @@ function AddressBook() {
         //data={data}
         data={filteredItems}
         pagination
+        paginationServer
+        paginationTotalRows={totalData}
+        paginationPerPage={countPerPage}
+        paginationComponentOptions={{
+          noRowsPerPage: true
+        }}
+        onChangePage={page => setPage(page)}
         paginationResetDefaultPage={resetPaginationToggle}
         subHeader
         subHeaderComponent={subHeaderComponentMemo}

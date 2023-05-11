@@ -20,6 +20,14 @@ class AddressBookListResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+
+//        return [
+//            'data' => $this->collection($this->id),
+//            'links' => [
+//                'self' => 'link-value',
+//            ],
+//        ];
+
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -29,7 +37,7 @@ class AddressBookListResource extends JsonResource
             'gender' => $this->gender,
             'age' => $this->age,
             'nationality' => $this->nationality,
-            'created_by' => $this->user->name,
+            'created_by' => $this->user->name
         ];
     }
 }

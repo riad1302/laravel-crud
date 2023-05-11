@@ -27,6 +27,7 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::controller(AddressBookController::class)->group(function () {
         Route::get('/book/list', 'index');
+        Route::get('/book/getTotalList', 'getTotalList');
         Route::get('/book/view/{id}', 'view');
         Route::post('/book/create', 'store');
         Route::put('/book/update/{id}', 'update');
